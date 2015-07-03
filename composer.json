@@ -1,0 +1,21 @@
+{
+    "name": "embark/adr",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "John Porter",
+            "email": "john@embarknow.co.uk"
+        }
+    ],
+    "require-dev": {
+
+    },
+    "require": {
+        "psr/http-message": "^1.0@dev",
+    },
+    "autoload": {
+        "psr-4": {
+            "Embark\\Adr\\": "src/Adr/"
+        }
+    }
+}
