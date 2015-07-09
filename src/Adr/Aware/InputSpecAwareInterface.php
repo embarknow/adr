@@ -6,21 +6,21 @@ namespace Embark\Adr\Aware;
  * Implementing classes can interact with http input specifications
  * An http input specification is a string that resolves to a HttpInputInterface instance
  */
-interface HttpInputSpecAwareInterface
+interface InputSpecAwareInterface
 {
     /**
-     * Set an http input spec
+     * Set an input spec
      *
      * @param string $spec
      *
      * @return self
      */
-    public function setHttpInputSpec($spec);
+    public function setInputSpec($spec);
 
     /**
-     * Get an http input spec
+     * Get an input spec
      *
      * @return string
      */
-    public function getHttpInputSpec();
+    public function getInputSpec();
 }

@@ -7,7 +7,7 @@ use Embark\Adr\ActionInterface;
 /**
  * Implementing classes can interact with ActionInterface instances
  */
-interface ActionInstanceAwareInterface
+interface ActionAwareInterface
 {
     /**
      * Set an action instance

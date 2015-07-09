@@ -7,7 +7,7 @@ use Embark\Adr\DomainInterface;
 /**
  * Implementing classes can interact with DomainInterface instances
  */
-trait DomainInstanceAwareTrait
+trait DomainAwareTrait
 {
     /**
      * @var DomainInterface

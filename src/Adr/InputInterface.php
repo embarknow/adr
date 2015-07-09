@@ -8,7 +8,7 @@ use Psr\Http\Message\ServerRequestInterface;
  * Input provided to a Domain instance must implement this interface.
  * Input implementing this interface must be considered valid.
  */
-interface HttpInputInterface
+interface InputInterface
 {
     /**
      * Extract domain input from the request.

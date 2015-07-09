@@ -7,7 +7,7 @@ use Embark\Adr\DomainInterface;
 /**
  * Implementing classes can interact with DomainInterface instances
  */
-interface DomainInstanceAwareInterface
+interface DomainAwareInterface
 {
     /**
      * Set a domain instance
