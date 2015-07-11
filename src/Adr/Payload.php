@@ -3,7 +3,7 @@
 namespace Embark\Adr;
 
 use Embark\Adr\PayloadInterface;
-use Embark\Adr\Domain\PayloadStatus;
+use Embark\Adr\PayloadStatus;
 
 class PayloadTrait implements PayloadInterface
 {
