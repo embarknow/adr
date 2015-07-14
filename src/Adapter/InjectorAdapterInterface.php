@@ -9,6 +9,13 @@ namespace Embark\Journey\Adapter;
 interface InjectorAdapterInterface
 {
     /**
+     * Apply a classmap to the injector for setup
+     *
+     * @param  array $classmap
+     */
+    public function bootstrap(array $classmap);
+
+    /**
      * Define instantiation directives for the specified class
      *
      * @param string $name The class (or alias) whose constructor arguments we wish to define
