@@ -1,22 +1,46 @@
 # ADR; Action, Domain, Responder
 
-Following the pattern described by [Paul Jones](http://pmjones.io/adr/)
+Following the pattern described by [Paul Jones](http://pmjones.io/adr/).
+
+Some of the wording in this file may be direct or altered duplicate, not in way of plagiarism, but in reference. All kudos for ADR is with Paul.
+
+## Preamble
 
 Organizes a single user interface interaction between a web client and a web application into three distinct roles.
 
 The pattern, like MVC, uses other patterns to build a complete web environment; HTTP Messaging and Routing for example.
 
+If you're not fully versed on ADR, then you must go and read Paul's [excellent article on the pattern](http://pmjones.io/adr/) before you dive in here.
+
+Embark ADR is trying to take a purist approach to the pattern, and as other implementations are using tried and tested methods, refining to a very specific methodology, this purist approach will remain purist.
+
+> Why, when others are proving certain concepts?
+
+While it is agreed here that the routes some other implementations are going downmake certain sense, Embark ADR wants to remain super simple and obvious.
+
+### Actions as an example
+
+After discussion with Paul, reference to re-using Actions repetitively has led him to make a default Action set ([Radar](https://github.com/radarphp/Radar.Adr) through to [Spark](https://github.com/sparkphp/adr) through to [Arbiter](https://github.com/arbiterphp/Arbiter.Arbiter)), Embark believes in tightly bound interfaces and use of traits, without defining a strict method like Spark's global action handler. This doesn't mean that similar default functionality can be built into implementations, however the underlying pattern in Embark ADR will remain completely divorced from this.
+
+Call it obsessive, it is.
+
 ## ADR Components
 
-ADR is split into main components as a design pattern, and then my implementation has sub-components, as any implementation would.
+As explained in Paul's article, ADR is split into three main components as a design pattern. Embark ADR, like others, has two other components to make it a functioning pattern.
 
 ### Action
 
-Is the logic that connects the Domain and Responder. It uses the request input to interact with the Domain, and passes the Domain output to the Responder.
+Is the logic that connects the Domain and Responder. It uses the http request input to interact with the Domain, and passes the Domain output to the Responder. This is in the form of the `Embark\Adr\ActionInterface`.
+
+Tried and tested implementations have taken the path of having one core Action which is set at a global level for re-use, whereas Embark ADR would expect that re-use means passing an instance of the same interface implementor in each time it is required. In both cases there may only be one actual implementation, but it is used slightly differently. Embark's pattern means that it is still completely open to interpretation.
 
 #### Input Validation
 
-Actions would be expected to perform some kind of Input Validation to return the application to the Client early, if any data does not validate.
+Actions would be expected to perform some kind of Input Validation to return the application to the Client early, if any data does not validate. With Embark ADR, this comes in the form of the `Embark\Adr\HttpInputInterface`.
+
+##### A helpful note on implementation
+
+Input validation should generally use an **Reject known bad** strategy, meaning that anything known to be bad data should either be dropped from the data sent to the domain, or return an error to the client.
 
 ### Domain
 
@@ -27,7 +51,7 @@ Is the logic to manipulate the domain. The Domain represents:
 - Environment Data
 - Persistence
 
-Each Domain object used by an Action can utilise many other Domain objects as needed; There is no limit to the complexity or hierarchy to a Domain.
+Each Domain object instantiated by an Action is there to be a bridge between your real domain and the ADR pattern. Embark ADR is completely unopinionated as to how this works. Good domains have a plentiful selection of service objects to do the legwork between
 
 
 ### Responder
