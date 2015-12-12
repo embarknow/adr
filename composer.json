@@ -1,21 +1,26 @@
 {
-    "name": "embark/adr",
-    "minimum-stability": "dev",
+    "name": "embarknow/adr",
+    "description": "ADR pattern library",
+    "license": "MIT",
     "authors": [
         {
             "name": "John Porter",
             "email": "john@embarknow.co.uk"
         }
     ],
-    "require-dev": {
-
-    },
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git://github.com/embarknow/adr"
+        }
+    ],
     "require": {
-        "psr/http-message": "^1.0@dev"
+        "psr/http-message": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "Embark\\Adr\\": "src/Adr/"
+            "EmbarkNow\\": "src/"
         }
     }
 }
