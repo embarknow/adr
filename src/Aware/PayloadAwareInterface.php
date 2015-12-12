@@ -1,8 +1,8 @@
 <?php
 
-namespace Embark\Adr\Aware;
+namespace EmbarkNow\Adr\Aware;
 
-use Embark\Adr\PayloadInterface;
+use EmbarkNow\Adr\PayloadInterface;
 
 /**
  * Implementing classes can interact with PayloadInterface instances

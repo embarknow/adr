@@ -1,8 +1,8 @@
 <?php
 
-namespace Embark\Adr\Aware;
+namespace EmbarkNow\Adr\Aware;
 
-use Embark\Adr\DomainInterface;
+use EmbarkNow\Adr\DomainInterface;
 
 /**
  * Implementing classes can interact with DomainInterface instances

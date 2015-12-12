@@ -1,6 +1,6 @@
 <?php
 
-namespace Embark\Adr;
+namespace EmbarkNow\Adr;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;

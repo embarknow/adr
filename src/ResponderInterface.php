@@ -1,10 +1,10 @@
 <?php
 
-namespace Embark\Adr;
+namespace EmbarkNow\Adr;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Embark\Adr\PayloadInterface;
+use EmbarkNow\Adr\PayloadInterface;
 
 interface ResponderInterface
 {
@@ -13,7 +13,7 @@ interface ResponderInterface
      *
      * @param  ServerRequestInterface $request
      * @param  ResponseInterface      $response
-     * @param  PayloadInterface       $payload
+     * @param  PayloadInterface $payload
      *
      * @return ResponseInterface
      */

@@ -1,8 +1,8 @@
 <?php
 
-namespace Embark\Adr\Aware;
+namespace EmbarkNow\Adr\Aware;
 
-use Embark\Adr\ActionInterface;
+use EmbarkNow\Adr\ActionInterface;
 
 /**
  * Implementing classes can interact with ActionInterface instances

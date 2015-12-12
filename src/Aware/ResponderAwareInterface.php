@@ -1,13 +1,13 @@
 <?php
 
-namespace Embark\Adr\Aware;
+namespace EmbarkNow\Adr\Aware;
 
-use Embark\Adr\ResponderInterface;
+use EmbarkNow\Adr\ResponderInterface;
 
 /**
  * Implementing classes can interact with ResponderInterface instances
  */
-interface ResponderInstanceAwareInterface
+interface ResponderAwareInterface
 {
     /**
      * Set a responder instance

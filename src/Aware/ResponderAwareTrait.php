@@ -1,10 +1,10 @@
 <?php
 
-namespace Embark\Adr\Aware;
+namespace EmbarkNow\Adr\Aware;
 
-use Embark\Adr\ResponderInterface;
+use EmbarkNow\Adr\ResponderInterface;
 
-trait ResponderInstanceAwareTrait
+trait ResponderAwareTrait
 {
     /**
      * @var ResponderInterface
